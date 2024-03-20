@@ -28,11 +28,10 @@ public:
     Rectangle(double side, double width) : Square(side), width(width) {}
 
     double getPerimeter() const {
-        Square::getPerimeter();
         return 2 * (side + width);
     }
 
-    void print() const{
+    void print() const override {
         Square::print();
         cout << "Width: " << width << endl;
         cout << "Perimeter: " << getPerimeter() << endl;
@@ -55,6 +54,5 @@ int main() {
     cout << endl;
     r_ptr->print();
     cout << endl;
-
     return 0;
 }
